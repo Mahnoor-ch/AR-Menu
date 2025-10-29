@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>View in AR | Innovify XR</title>
+  <meta name="description" content="View 3D food models in AR (MindAR + Three.js)">
+  <link rel="icon" href="./images/logoxr.png" />
+  <script type="module" crossorigin src="./assets/arview-CkCwyeZV.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three.module-EctxqEg-.js">
+  <link rel="stylesheet" crossorigin href="./assets/three-C1cXvZ5w.css">
+</head>
+<body>
+  <div id="viewRoot" class="view-root">
+    <div id="ar-container" class="mindar-container"></div>
+    <canvas id="viewer-canvas" class="viewer-canvas"></canvas>
+  </div>
+
+  <div class="ar-ui" aria-hidden="false">
+    <button id="backBtn" class="btn-back" aria-label="Back to menu">← Back</button>
+    <button id="switchView" class="btn-switch" title="Switch to AR / 3D" aria-pressed="false">
+      <span id="switchIcon">🔁</span>
+      <span id="switchLabel">Switch</span>
+    </button>
+    <button id="autoInfoToggle" class="btn-auto" title="Toggle auto-open info">
+      Auto Info: <span id="autoState">Off</span>
+    </button>
+    <div id="hint" class="hint">Tap the model to view details</div>
+    <div id="infoBox" class="info-box" role="dialog" aria-hidden="true">
+      <button id="closeInfo" class="info-close" aria-label="Close info">✕</button>
+      <h2 id="itemName">Loading...</h2>
+      <p id="itemDesc"></p>
+      <p id="itemPrice" class="price"></p>
+    </div>
+    <div id="loader" class="loader" aria-hidden="false">
+      <div class="spinner" role="status" aria-hidden="true"></div>
+      <div class="loader-text">Preparing experience...</div>
+    </div>
+  </div>
+
+  <!-- ✅ Corrected script path -->
+</body>
+</html>
+
+
+
